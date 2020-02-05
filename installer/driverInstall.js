@@ -22,7 +22,7 @@ var platform = os.platform();
 var arch = os.arch();
 
 var vscode_build = false;
-var electron_version = '6.1.5';
+var electron_version = '7.1.2';
 
 console.log("platform = ", platform, ", arch = ", arch, ", node.js version = ", process.version);
 
@@ -695,13 +695,13 @@ function findElectronVersion() {
           vscodeVer = parseFloat(codeOut.split('\n')[0]);
           if(!isNaN(vscodeVer)) {
             if (vscodeVer >= 1.40) {
-                electron_version = "6.1.5";
+                electron_version = "7.1.2";
             }
             else if (vscodeVer >= 1.36) {
-                electron_version = "4.2.7";
+                electron_version = "7.1.2";
             }
             else {// vscode version older than 1.36 not supported
-                electron_version = "3.0.0"; // old binary, not getting updated.
+                electron_version = "7.1.2"; // old binary, not getting updated.
             }
             console.log("Detected VSCode version", vscodeVer,
                     ", will use Electron version ", electron_version);
